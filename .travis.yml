@@ -13,7 +13,7 @@ after_success:
   - git commit -m "$COMMIT_MSG"
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
-  - git push -q
+  - git push -q origin HEAD:$TRAVIS_BRANCH
  
 notifications:
   email:
