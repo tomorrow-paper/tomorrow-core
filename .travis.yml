@@ -8,7 +8,7 @@ script:
 after_success:
   - cargo install cargo-bump
   - export VERSION_BUMP=`cargo bump`
-  - export COMMIT_MSG="[$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER] $VERSION_BUMP"
+  - export COMMIT_MSG="[ci skip][$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER] $VERSION_BUMP"
   - git add Cargo.toml
   - git commit -m "$COMMIT_MSG"
   - git config --global user.email "builds@travis-ci.com"
